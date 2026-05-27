@@ -12,7 +12,9 @@ opciones_menu = [
     "2.- Jugar a las carreras (Sube felicidad, gasta energía)",
     "3.- Hacerlo tomar una siesta (Sube energía)",
     "4.- Ver estado actual",
-    "5.- Salir del juego"
+    "5.- Darle un baño (Mantenimiento higiénico)",
+    "6.- Entrenar trucos mágicos (Sube mucha felicidad, gasta energía)",
+    "7.- Salir del juego"
 ]
 
 while energia > 0 and hambre < 100:
@@ -65,8 +67,25 @@ while energia > 0 and hambre < 100:
             print(f"Energía: {energia}/100")
             print(f"Hambre: {hambre}/100")
             print(f"Felicidad: {felicidad}")
-            
+
         elif opcion == 5:
+            print(f"\n Metiendo a {nombre} a la tina...")
+            for i in range(3):
+                print("¡burbujas!")
+                time.sleep(0.5)
+            hambre = hambre + 5
+            print(f"¡{nombre} quedó reluciente, esponjoso y oliendo a flores!")
+            
+        elif opcion == 6:
+            if energia < 25:
+                print(f"\n{nombre} no tiene suficientes fuerzas para una caminata larga.")
+            else:
+                print(f"\n{nombre} se adentra en la espesura del bosque")
+                for i in range(3):
+                    print("*Crujido de hojas*... buscando...")
+                    time.sleep(0.6)
+        
+        elif opcion == 7:
             print("\n¡Gracias por jugar! Adiós.")
             break
             
@@ -74,7 +93,7 @@ while energia > 0 and hambre < 100:
             print("Opción incorrecta, elige un número del 1 al 5.")
             
     except ValueError:
-        print("\n¡Error! Por favor, ingresa un número válido del 1 al 5. No uses letras ni símbolos.")
+        print("\n¡Error! Por favor, ingresa un número válido del 1 al 7. No uses letras ni símbolos.")
     except Exception as e:
         print(f"\nOcurrió un error inesperado: {e}")
 
