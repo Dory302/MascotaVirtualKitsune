@@ -16,6 +16,7 @@ while energia > 0 and hambre < 100:
     
     opcion = input("Selecciona una opción: ")
     
+    if opcion == "1":
     for i in range(3):
     hambre = hambre - 10
 
