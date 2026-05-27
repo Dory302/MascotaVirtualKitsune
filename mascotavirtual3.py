@@ -16,11 +16,13 @@ while energia > 0 and hambre < 100:
     
     opcion = input("Selecciona una opción: ")
     
-    if opcion == "1":
-        hambre = hambre - 20
-        if hambre < 0: 
-            hambre = 0
-        print(f"Alimentaste a {nombre}. ¡Ya no tiene tanta hambre!")
+    for i in range(3):
+    hambre = hambre - 10
+
+    if hambre < 0:
+        hambre = 0
+
+    print(f"Le diste una manzana #{i+1} a {nombre}")
         
     elif opcion == "2":
         if energia < 20:
